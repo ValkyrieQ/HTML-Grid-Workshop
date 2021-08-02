@@ -14,4 +14,57 @@
 
 .nav-top {
     padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly; /* not sure what affect */
+    align-items: center; /* not sure what affect in our design */
+    border-bottom: 2px solid #eee;
+}
+
+.nav-top .logo h1 {
+    font-family: 'Courgette';
+    font-size: 3rem;
+}
+
+ul.social {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: end;
+}
+
+ul.social li {
+    text-align: right;
+}
+
+ul.social a {
+    color: #333;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+ul.social a:hover {
+    transform: translateY(-5px);
+}
+
+.nav-bottom {
+    padding: 1rem 0;
+}
+
+ul.menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+ul.menu a {
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+ul.menu a:hover {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
 }
