@@ -73,6 +73,7 @@ ul.menu a:hover {
 
 .header-grid {
     display: grid;
+    margin-top: .5rem;
     /* grid-template-columns: repeat(8, 1fr); */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 300px 300px;
@@ -299,3 +300,83 @@ footer {
 }
 
 /* End footer section */
+
+@media screen and (max-width: 480px) {
+    .nav-top {
+        grid-template-columns: 1fr;
+        /* justify-content: center; */
+        text-align: center;
+    }
+
+    ul.social {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    ul.social li {
+        text-align: center;
+    }
+
+    ul.menu {
+        justify-content: center;
+    }
+
+    ul.menu li {
+        text-align: center;
+    }
+
+    /* End nav section */
+
+    .header-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 300px);
+        grid-template-areas:
+            "article1"
+            "article2"
+            "article3"
+            "article4"
+            "article5";
+        margin: 1rem;
+    }
+
+    .header-grid-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .post-articles-title {
+        text-align: center;
+    }
+
+    .post-articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-articles-grid-item-left-item {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .post-articles-grid-item-left-item-content {
+        margin: 1rem;
+    }
+
+    .post-articles-grid-sidebar-title {
+        text-align: center;
+    }
+
+    .post-articles-grid-sidebar-item {
+        margin: 1rem;
+    }
+
+    /* End post article section */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid .footer-grid-item:not(:last-child) {
+        border-bottom: 2px solid #ccc;
+    }
+
+    /* End footer section */
+}
